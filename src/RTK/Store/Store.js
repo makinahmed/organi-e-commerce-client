@@ -1,7 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-
+import featuresReducer from "../Slice/featureSlice";
+import popularProductsReducer from '../../RTK/Slice/popularProductsSlice';
 export const store = configureStore({
   reducer: {
-      name: 'Makin'
+    features: featuresReducer,
+    populars: popularProductsReducer,
   },
 });
