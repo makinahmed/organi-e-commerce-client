@@ -11,7 +11,7 @@ export const fetchFeatures = createAsyncThunk(
 );
 
 export const featureSlice = createSlice({
-  name: "featureProduct",
+  name: "feature",
   initialState: {
     displayFeatures: [],
   },

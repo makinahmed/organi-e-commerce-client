@@ -12,6 +12,7 @@ import FeatureNav from "./Pages/FeaturedProduct/FeatureNav";
 import FeatureBanner from "./Pages/FeatureBanner/FeatureBanner";
 import FeatureCard from "./Pages/FeaturedProduct/FeatureCard";
 import PopularProducts from './Pages/PopularProducts/PopularProducts';
+import Blog from "./Pages/Blog/Blog";
 // import FeatureCard from "./Pages/FeaturedProduct/FeatureCard";
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <FeatureNav />
         <FeatureBanner />
         <PopularProducts/>
+        <Blog/>
       </div>
     </Provider>
   );
