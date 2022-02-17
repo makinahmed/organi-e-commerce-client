@@ -44,10 +44,10 @@
     "img": "https://i.ibb.co/vsCSZ1X/feature-4.jpg"
   },
   {
-    "title": "Fruits",
+    "title": "Grapes",
     "price": 25,
     "id": 5,
-    "category": "Grapes",
+    "category": "Fruits",
     "description": "Fruit and vegetables (F&V) have been a cornerstone of healthy dietary recommendations; the 2015-2020 U.S. Dietary Guidelines for Americans recommend that F&V constitute one-half of the plate at each meal. F&V include a diverse collection of plant foods that vary in their energy, nutrient, and dietary bio active contents. F&V have potential health-promoting effects beyond providing basic nutrition needs in humans, including their role in reducing inflammation and their potential preventive effects on various chronic disease states leading to decreases in years lost due to premature mortality and years lived with disability/morbidity. Current global intakes of F&V are well below recommendations.",
     "rating": 3.5,
     "reviews": 15,

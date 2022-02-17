@@ -13,6 +13,9 @@ import FeatureBanner from "./Pages/FeatureBanner/FeatureBanner";
 import FeatureCard from "./Pages/FeaturedProduct/FeatureCard";
 import PopularProducts from './Pages/PopularProducts/PopularProducts';
 import Blog from "./Pages/Blog/Blog";
+import Footer from "./Pages/Footer/Footer";
+import Shop from "./Pages/Shop/Shop";
+// import RangeSlider from "./Pages/RangeSlider/RangeSlider";
 // import FeatureCard from "./Pages/FeaturedProduct/FeatureCard";
 function App() {
   return (
@@ -26,8 +29,11 @@ function App() {
 
         <FeatureNav />
         <FeatureBanner />
-        <PopularProducts/>
-        <Blog/>
+        <PopularProducts />
+        <Blog />
+        <Shop />
+       
+        <Footer />
       </div>
     </Provider>
   );

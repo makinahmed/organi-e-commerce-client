@@ -36,7 +36,7 @@ const FeatureCard = (props) => {
     <div className="card">
       <Card sx={{ minWidth: 250 }}>
         <CardMedia
-          sx={{ minHeight: 300 }}
+          sx={{ minHeight: 300,maxHeight:300,maxWidth: 250 }}
           component="img"
           alt="green iguana"
           image={img}

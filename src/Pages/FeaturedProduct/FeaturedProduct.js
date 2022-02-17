@@ -11,7 +11,7 @@ const FeaturedProduct = () => {
   useEffect(() => {
     dispatch(fetchFeatures());
   }, []);
-
+// 
   return (
     <Grid
       container
