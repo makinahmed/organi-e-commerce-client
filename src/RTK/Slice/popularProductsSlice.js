@@ -6,7 +6,6 @@ export const fetchPopularProducts = createAsyncThunk(
     const response = await fetch("http://localhost:5000/popularProduct").then(
       (res) => res.json()
     );
-     
     return response;
   }
 );

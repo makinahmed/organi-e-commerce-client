@@ -1,12 +1,16 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
-export const fetchShop = createAsyncThunk("shops/fetchShop", async () => {
-  const response = fetch("http://localhost:5000/shop").then((res) =>
-    res.json()
-  );
-  // console.log(response)
-  return response;
-});
+export const fetchShop = createAsyncThunk(
+  `shops/fetchShop`,
+  async (category) => {
+    const response = await fetch(
+      `http://localhost:5000/shop/?category=${category}`
+    ).then((res) => res.json());
+    console.log(category, " i am category");
+    console.log(response, " i am response");
+    return response;
+  }
+);
 
 export const shopSlice = createSlice({
   name: "shops",
@@ -20,4 +24,5 @@ export const shopSlice = createSlice({
   },
 });
 
+export const { filterCategory } = shopSlice.actions;
 export default shopSlice.reducer;

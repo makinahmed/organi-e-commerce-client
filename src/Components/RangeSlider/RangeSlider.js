@@ -1,4 +1,4 @@
-import * as React from "react";
+import   React,{useState} from "react";
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
 
@@ -6,8 +6,7 @@ function valuetext(value) {
   return `$${value}`;
 }
 const RangeSlider = () => {
-  const [value, setValue] = React.useState([0, 100]);
-//   console.log(value);
+  const [value, setValue] = useState([0, 100]);
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
@@ -16,7 +15,7 @@ const RangeSlider = () => {
     <Box sx={{ width: 300 }}>
       <Slider
         style={{color: 'green'}}
-        getAriaLabel={() => "Temperature range"}
+        getAriaLabel={() => "Price range"}
         value={value}
         onChange={handleChange}
         valueLabelDisplay="auto"

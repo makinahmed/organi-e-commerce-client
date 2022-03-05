@@ -32,6 +32,7 @@ const useStyles = makeStyles({
 const FeatureCard = (props) => {
   const classes = useStyles();
   const { title, price, img } = props.feature;
+   
   return (
     <div className="card">
       <Card sx={{ minWidth: 250 }}>

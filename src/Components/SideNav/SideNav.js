@@ -3,7 +3,7 @@ import React from 'react';
 const SideNav = () => {
     return (
         <div>
-           <h2>I am Side Nav</h2>
+           <h2>I am Side Nav 1</h2>
         </div>
     );
 };

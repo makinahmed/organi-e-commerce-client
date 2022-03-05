@@ -1,0 +1,17 @@
+.contact-banner {
+   position: relative;
+}
+.contact-banner img {
+    max-width: 100%;
+    height: 10em;
+    object-fit: cover;
+    -o-object-fit: contain;
+}
+.contact-banner div {
+    color: white;
+    font-size: 2rem;
+   position: absolute;
+   top: 40%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
