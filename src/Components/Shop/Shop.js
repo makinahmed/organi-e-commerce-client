@@ -6,9 +6,9 @@ import { fetchShop } from "../../RTK/Slice/shopSlice";
 import FeatureCard from "../FeaturedProduct/FeatureCard";
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
-
-// import ReactPaginate from "react-paginate";
 import "./Paginate.css";
+import ContactBanner from "../Contact/ContactBanner";
+
 const useStyle = makeStyles({
   listItems: {
     listStyle: "none",
@@ -16,6 +16,11 @@ const useStyle = makeStyles({
     margin: "10px auto",
     fontSize: 20,
     cursor: "pointer",
+  },
+  slider: {
+    "& .MuiSlider-thumb": {
+      overflow: "hidden",
+    },
   },
 });
 const categoryList = [
@@ -25,9 +30,8 @@ const categoryList = [
   { name: "Fruits", value: "Fruits" },
   { name: "Sea Foods", value: "Sea Foods" },
   { name: "Eggs", value: "Eggs" },
-  { name: "Dairy", value: "Dairy" },
-  { name: "Nuts And Seeds", value: "Nuts And Seeds" },
-  { name: "Ice Cream", value: "Dairy" },
+  { name: "Dairy Foods", value: "Dairy" },
+  { name: "Nuts And Seeds", value: "Nuts and seeds" },
   { name: "Others", value: "Others" },
 ];
 function valuetext(value) {
@@ -42,14 +46,16 @@ const Shop = ({ itemsPerPage }) => {
     dispatch(fetchShop());
   }, []);
   const handleChange = (event, newValue) => {
-    setValue(newValue);
+    setValue(newValue); 
+    // dispatch(fetchShop("Others", value[0], value[1]));
   };
 
-  const handleClick = (category) => {
-    dispatch(fetchShop(category));
+  const handleClick = (category,min,max) => {
+    dispatch(fetchShop(category, min, max));
   };
   return (
     <>
+      <ContactBanner title="Organi Shop" />
       <Grid container>
         <Grid item xs={12} md={3}>
           <ul>
@@ -57,29 +63,30 @@ const Shop = ({ itemsPerPage }) => {
               <li
                 key={item._id}
                 className={classes.listItems}
-                onClick={() => handleClick(item.value)}
+                onClick={() => handleClick(item.value,value[0],value[1])}
               >
                 {item.name}
               </li>
             ))}
-            <Box sx={{ width: 300 }}>
+            <Box  >
               <Slider
                 max={500}
                 min={0}
-                style={{ color: "green" }}
+                style={{ color: "green", overflow: "hidden" }}
                 getAriaLabel={() => "range"}
                 value={value}
                 onChange={handleChange}
                 valueLabelDisplay="auto"
                 getAriaValueText={valuetext}
+                className={classes.slider}
               />
               <span
-                style={{ color: "black", margin: "0 20px", fontWeight: 700 }}
+                style={{ color: "black", margin: "0 20px", fontWeight: 500 }}
               >
                 Min: ${value[0]}
               </span>
               <span
-                style={{ color: "black", margin: "0 20px", fontWeight: 700 }}
+                style={{ color: "black", margin: "0 20px", fontWeight: 500 }}
               >
                 Max: ${value[1]}
               </span>

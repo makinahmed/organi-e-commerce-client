@@ -1,4 +1,4 @@
-.icon {
+/* .icon {
    visibility: hidden;
 }
 .card:hover .icon {
@@ -6,3 +6,31 @@
     margin-top: -50px,
 }
  
+ */
+ 
+
+ /* #cardContainer :hover #cardContent {
+    display: block;
+    background-color: red;
+ } */
+.cardContainer {
+   /* height: 100%; */
+   overflow-y: hidden;
+   position: relative;
+}
+.text {
+   margin-top: 40%;
+}
+ .cardContent {
+    
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    display: none;
+   background-color: #999999;
+ }
+ .cardContainer:hover .cardContent {
+   display: block;
+   z-index: 3;
+   transition: all 5000ms ease-in-out;
+ }

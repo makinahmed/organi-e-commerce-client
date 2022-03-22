@@ -2,12 +2,10 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 export const fetchShop = createAsyncThunk(
   `shops/fetchShop`,
-  async (category) => {
+  async (category, min, max) => {
     const response = await fetch(
-      `http://localhost:5000/shop/?category=${category}`
+      `http://localhost:5000/shop/?category=${category}&min=${min}&max=${max}`
     ).then((res) => res.json());
-    console.log(category, " i am category");
-    console.log(response, " i am response");
     return response;
   }
 );

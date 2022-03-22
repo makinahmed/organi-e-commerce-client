@@ -2,10 +2,10 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 export const fetchFeatures = createAsyncThunk(
   "features/fetchFeatures",
-  async () => {
-    const response = await fetch("http://localhost:5000/features").then((res) =>
-      res.json()
-    );
+  async (type) => {
+    const response = await fetch(
+      `http://localhost:5000/features?type=${type}`
+    ).then((res) => res.json());
     return response[0].data;
   }
 );

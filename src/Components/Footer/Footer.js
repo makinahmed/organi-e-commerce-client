@@ -13,32 +13,35 @@ const useStyle = makeStyles({
     listStyleType: "none",
     margin: "10px auto",
     textAlign: "left",
+    fontSize: "1.5rem",
   },
   links: {
     textDecoration: "none",
     color: "black",
-    fontSize: "13px",
+    fontSize: "1.5rem",
   },
   input: {
     outline: "none",
     padding: "10px",
+    fontSize: "1.5rem",
   },
   button: {
     padding: "12px",
     backgroundColor: "#7fad39",
     border: "none",
+    fontSize: "1.5rem",
   },
 });
 const Footer = () => {
   const classes = useStyle();
   return (
     <>
-      <Grid container>
+      <Grid container style={{ backgroundColor: "#F3F6FA", padding: "5em",marginTop: "5em" }}>
         <Grid item md={6} lg={4}>
           <Box>
             <img src={logo} alt="" />
           </Box>
-          <Typography sx={{ fontSize: "13px" }}>
+          <Typography sx={{ fontSize: "1.5rem", lineHeight: 3 }}>
             Address: 60-49 Road 11378 New York <br />
             Phone: +65 11.188.888 <br />
             Email: hello@toyou.com
@@ -123,11 +126,11 @@ const Footer = () => {
           </Typography>
         </Grid>
         <Grid item md={6} lg={4}>
-          <Typography variant="h5" sx={{ fontWeight: 900 }}>
+          <Typography variant="h5" sx={{ fontWeight: 900, fontSize: "1.5rem" }}>
             Join Our Newsletter Now
           </Typography>
           <Typography
-            sx={{ fontWeight: 400, fontSize: "15px", margin: "15px auto" }}
+            sx={{ fontWeight: 400, fontSize: "1.5rem", margin: "15px auto" }}
           >
             Get E-mail updates about our latest shop and special offers.
           </Typography>
@@ -142,7 +145,8 @@ const Footer = () => {
           <Box sx={{ marginTop: 2 }}>
             <FacebookIcon
               sx={{
-                padding: 2,
+                padding: 1,
+                margin: 2,
                 fontSize: "30px",
                 backgroundColor: "white",
                 color: "black",
@@ -150,7 +154,8 @@ const Footer = () => {
             />
             <TwitterIcon
               sx={{
-                padding: 2,
+                padding: 1,
+                margin: 2,
                 fontSize: "30px",
                 backgroundColor: "white",
                 color: "black",
@@ -158,7 +163,8 @@ const Footer = () => {
             />
             <InstagramIcon
               sx={{
-                padding: 2,
+                padding: 1,
+                margin: 2,
                 fontSize: "30px",
                 backgroundColor: "white",
                 color: "black",
@@ -171,7 +177,7 @@ const Footer = () => {
       <Grid container justifyContent="space-around">
         <Grid item>
           <Box xs={12} md={4}>
-            <Typography variant="p">
+            <Typography variant="p" sx={{ color: "gray" }}>
               Copyright ©2022 All rights reserved
             </Typography>
           </Box>

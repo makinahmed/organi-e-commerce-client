@@ -2,40 +2,39 @@ import { Grid } from "@mui/material";
 import { createTheme } from "@mui/system";
 import React from "react";
 import banner from "../../images/banner.jpg";
-import SideNav from "../SideNav/SideNav";
+// import SideNav from "../SideNav/SideNav";
 const Banner = () => {
   const bannerStyle = createTheme({
     backgroundImage: `url(${banner})`,
-    backgroundPosition: "center",
+    backgroundPosition: "center center",
     backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-    // flexGrow: "1",
+    backgroundSize: "100%",
+    paddingBottom: "2em",
+    objectFit: "cover",
+    height: "calc(100% - '5px')",
     paddingLeft: "50px",
-    // marginLeft: "50px",
     text: {
       h5: {
         color: "#7fad39",
         fontWeight: 700,
         letterSpacing: ".4em",
-        fontSize: "1.4em",
-         
+        fontSize: "clamp(1vw, 15vw, 2vw)",
       },
       h2: {
         fontWeight: 700,
-        fontSize: "4.6em",
-        lineHeight: "1em",
+        fontSize: "clamp(3vw, 15vw, 5vw)",
         margin: ".5em 0",
+        height: "calc(100% - '5px')",
       },
       p: {
-        fontSize: "1.6em",
+        fontSize: "clamp(1vw, 5vw, 2vw)",
         color: "#6f6f6f",
         fontWeight: 400,
-        lineHeight: "1em",
         margin: "0 0 1.5em 0",
       },
       button: {
         display: "inlineBlock",
-        fontSize: "1.4em",
+        fontSize: "clamp(1vw, 15vw, 2.4vw)",
         padding: ".5em 1em",
         color: "#fff",
         fontWeight: 700,
@@ -46,12 +45,11 @@ const Banner = () => {
     },
   });
   return (
-    <Grid container style={{ textAlign: "left" }}>
-      <Grid item md={2}>
-        <SideNav />
-      </Grid>
-
-      <Grid item style={bannerStyle} md={10}>
+    <Grid
+      container
+      style={{ textAlign: "left", paddingBottom: "5em", }}
+    >
+      <Grid item style={bannerStyle} xs={12}>
         <h5 style={bannerStyle.text.h5}>FRUIT FRESH</h5>
         <h2 style={bannerStyle.text.h2}>Vegetable</h2>
         <h2 style={bannerStyle.text.h2}>100% Organic</h2>

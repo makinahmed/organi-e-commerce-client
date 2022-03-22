@@ -3,7 +3,7 @@ import Banner from "./Banner/Banner";
 import Blog from "./Blog/Blog";
 import FeatureBanner from "./FeatureBanner/FeatureBanner";
 import FeaturedProduct from "./FeaturedProduct/FeaturedProduct";
-import FeatureNav from "./FeaturedProduct/FeatureNav";
+// import FeatureNav from "./FeaturedProduct/FeatureNav";
 import Footer from "./Footer/Footer";
 import NavBar from "./NavBar/NavBar";
 import PopularProducts from "./PopularProducts/PopularProducts";
@@ -14,7 +14,7 @@ const Home = () => {
     <div>
       <Banner />
       <ProductSlider />
-      <FeatureNav />
+      {/* <FeatureNav /> */}
       <FeaturedProduct />
       <FeatureBanner />
       <PopularProducts />

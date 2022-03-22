@@ -21,47 +21,51 @@ const Blog = () => {
     dispatch(fetchBlog());
   }, []);
   return (
-    <Grid container justifyContent="center" spacing={12}>
-      {blogs.slice(2,5).map((blog) => (
-        <Grid item>
-          <Card sx={{ minWidth: 345, maxWidth: 345 }}>
-            <CardMedia
-              component="img"
-              alt="green iguana"
-              height="140"
-              image={blog.img}
-            />
-            <CardContent sx={{ textAlign: "left" }}>
-              <Box sx={{ color: "gray", textAlign: "left" }}>
-                <CalendarTodayIcon
-                  sx={{ display: "inline-block", padding: "0 10px 0 0" }}
-                />
-                {blog.date}
-                <ChatBubbleOutlineOutlinedIcon
-                  sx={{ display: "inline-block", padding: "0 10px" }}
-                />
-                {blog.review}
-              </Box>
-              <Typography
-                gutterBottom
-                variant="h4"
-                sx={{ color: "black", fontWeight: 900, marginTop: 2 }}
-                component="div"
-              >
-                {blog.title.toUpperCase()}
-              </Typography>
-              <Typography
-                sx={{ fontSize: 15,letterSpacing:.5 }}
-                variant="body2"
-                color="text.secondary"
-              >
-                {blog.description.slice(0, 150)}
-              </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
-      ))}
-    </Grid>
+    <div  >
+      <h1 style={{ fontSize: "5rem", margin: "1.5em auto" }}>Blogs</h1>
+      <Grid container justifyContent="center" spacing={12}>
+        {blogs.slice(2, 5).map((blog) => (
+          <Grid item>
+            <Card sx={{ minWidth: 345, maxWidth: 345 }}>
+              <CardMedia
+                component="img"
+                alt="green iguana"
+                height="140"
+                image={blog.img}
+              />
+              <CardContent sx={{ textAlign: "left" }}>
+                <Box sx={{ color: "gray", textAlign: "left" }}>
+                  <CalendarTodayIcon
+                    sx={{ display: "inline-block", padding: "0 10px 0 0" }}
+                  />
+                  {blog.date}
+                  <ChatBubbleOutlineOutlinedIcon
+                    sx={{ display: "inline-block", padding: "0 10px" }}
+                  />
+                  {blog.review}
+                </Box>
+                <Typography
+                  gutterBottom
+                  variant="h4"
+                  sx={{ color: "black", fontWeight: 900, marginTop: 2 }}
+                  component="div"
+                >
+                  {blog.title.toUpperCase()}
+                </Typography>
+                <Typography
+                  sx={{ fontSize: 15, letterSpacing: 0.5 }}
+                  variant="body2"
+                  color="text.secondary"
+                >
+                  {blog.description.slice(0, 150) + " "}
+                  <a href="/">See More</a>
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+        ))}
+      </Grid>
+    </div>
   );
 };
 

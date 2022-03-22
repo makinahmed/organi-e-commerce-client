@@ -2,12 +2,13 @@ import { Box } from "@mui/material";
 import React from "react";
 import breadcumb from "../../images/breadcrumb.jpg";
 import "./contactBanner.css";
-const ContactBanner = () => {
+const ContactBanner = (props) => {
+  const {title} = props
   return (
     <Box className="contact-banner">
       <img src={breadcumb} alt="" />
      <Box>
-         <h1>Contact Us</h1>
+         <h1>{title}</h1>
      </Box>
     </Box>
   );

@@ -31,7 +31,18 @@ const FeatureNav = () => {
   const fruits = allFeaturedProducts.filter(
     (a) => a.category.toLowerCase() === "fruits"
   );
-  const links = ["ALL", "FRUITS", "VEGETABLES", "FAST FOOD", "OTHERS"];
+  const links  = ["ALL", "FRUITS", "VEGETABLES", "FAST FOOD", "OTHERS"];
+  // const links = [
+  //   { name: "All", value: "" },
+  //   { name: "Fresh Meat", value: "Meat" },
+  //   { name: "Vegetables", value: "Vegetables" },
+  //   { name: "Fruits", value: "Fruits" },
+  //   { name: "Sea Foods", value: "Sea Foods" },
+  //   { name: "Eggs", value: "Eggs" },
+  //   { name: "Dairy Foods", value: "Dairy" },
+  //   { name: "Nuts And Seeds", value: "Nuts and seeds" },
+  //   { name: "Others", value: "Others" },
+  // ];
   return (
     <div>
       <h3>Featured Product</h3>
